@@ -1,0 +1,9 @@
+jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+        - 8087:8080
+        - 50000:50000
+    volumes:
+        - /c/Users/Baicai/wwwroot/jenkin:/var/jenkins_home
+        - /var/run/docker.sock:/var/run/docker.sock
+        - $(which docker):/bin/docker
